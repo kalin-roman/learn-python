@@ -17,6 +17,6 @@ if c(i1) and c(j1) and c(i2) and c(j2):
     else:
         print ("No")
 else:
-    print ("Введите цифры от 1 до 8!!!!!!")
+    print ("Введите цифры от 1 до 8!")
 
 

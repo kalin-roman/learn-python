@@ -6,9 +6,7 @@ for i in s:
     print(i)
 
 
-s = {"Kiyv":2757,
-    "Lviv":241,
-    "Odessa":534,}
+s = { "Kiyv": 2757, "Lviv": 241, "Odessa": 534 }
 s["Kiyv"] = 4543
 s["Dnepr"] = 352
 

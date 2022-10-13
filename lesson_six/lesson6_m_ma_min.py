@@ -4,15 +4,10 @@ from tkinter.ttk import Separator
 
 N = []
 x = 0
-
-
-
-
 while x != "#":
     x = input('Enter the number: ') 
     if x != '#':
         N.append(int(x))
-
 
 max = 0
 min = 9999

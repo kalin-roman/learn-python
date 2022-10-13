@@ -1,10 +1,8 @@
 from calendar import c
 from re import X
 
-
-inX = input('x = ')
-inY = input('y = ')
-
+inX = input('x : ')
+inY = input('y : ')
 if inX and inY:
     x = int(inX)
     y = int(inY)
@@ -27,7 +25,7 @@ if inX and inY:
         else:                   # x<0, y<0    
             print("Третья четверть")
 else:
-    print('Enter the numbers!!!')
+    print('Enter the numbers, please')
 
 
 

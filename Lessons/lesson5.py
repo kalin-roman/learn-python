@@ -1,7 +1,5 @@
 from math import ceil, radians
 
-
-
 def invert(A:list):
     j = len(A) - 1
     for i in range(len(A) // 2):

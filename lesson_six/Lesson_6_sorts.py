@@ -39,9 +39,6 @@ def count_sort(A):
         x = y
             
 
-        
-
-
 def test_sort(fnSort):
     print('Testing: ',fnSort.__doc__)
     print('testcase #1: ', end ='')
@@ -67,8 +64,6 @@ def test_sort(fnSort):
     A_sorted = [0,1,1,1,2,2,2,2,2,3,3,3,3,4,5,5,5,6,6,6,6,7,7,8,9,9]
     fnSort(A)
     print('Ok'if A == A_sorted else 'Fail')
-
-
 
 
 if __name__=='__main__':
