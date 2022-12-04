@@ -96,8 +96,116 @@ def bubles(A):
     return ''.join(x)
 
 
-def 
-a = input('Введите последовательность чисел:  ')
+def slovar_poryadok(b):
+        l = b
+        max = 0
+        for i in l:
+            if len(i)> max:
+                max = len(i)
+        for k in range(len(l)):
+            if len(l[k]) < max:
+                while len(l[k]) != max:
+                    l[k] = '0' + l[k]
+        return l
 
-# print(search(str(input('Enter the number:')),x))
-print(bubles(a))
+
+def recurtion(k, l = 1):
+        if l == len(k[0]):
+            return 
+        else:
+            k.sort(key = lambda n : n[len(n)-l])    
+            e = k[0][len(k) - 1]
+            s = []
+            for u in k:   
+                if e == u[len(k) - 1]:
+                    s.append(u)
+  
+                    recurtion(k ,  l + 1)
+        return k 
+
+def r_sort(A, n = 1):
+    fn = lambda x : int(str(x // n)[-1])
+    A.sort(key = fn)
+    if len(A) <= 1:
+        return A
+    j = 0
+    for i in range(len(A) - 1):
+       if (fn(A[i]) != fn(A[i + 1])):
+            A[j:i+1] = r_sort(A[j:i+1], n * 10)
+            j = i + 1
+    A[j:len(A)] = r_sort(A[j:len(A)], n * 10)
+    return A
+
+
+def task_r_sort():   
+    b = input('Enter the numbers with space between them: ').split()
+    nums = [int(x) for x in b]
+
+    r_sort(nums)
+    print(nums)
+
+
+def matpomosh(A, n = 1):
+    r = False if n == 1 else True 
+    A.sort(key= lambda x :  x[n], reverse = r)
+    if len(A) <= 1:
+        return A
+    j = 0
+    for i in range(len(A)-1):
+        if A[i][n] != A[i+1][n]:
+            A[j:i+1] = matpomosh(A[j:i+1], 0)
+            j = i + 1
+    A[j:len(A)] = matpomosh(A[j:len(A)], 0)
+    return A
+
+
+
+def tests():
+    k = int(input('Enter the amount of student: '))
+    L = []
+    for i in range(k):
+        l = input('Enter the Lenght and weight: ').split()
+        if len(l) == 2:
+            L.append((float(l[0]),float(l[1])))
+    print(len(L))
+    print(*matpomosh(L), sep='\n')
+
+
+def find(A,n):
+    for i,ar in A:
+        if n == i:
+            return ar
+    a = []
+    A.append((n,a))
+    return a
+
+def sort_str(A,n = 0):
+    A.sort(key= lambda x : x[0][n])
+    if len(A)<=1:
+        return A
+    j = 0
+    for i in range(len(A)-1):
+        if A[i][n] != A[i+1][n]:
+            A[j:i+1] = matpomosh(A[j:i+1], n + 1)
+            j = i + 1
+
+
+d = int(input('Enter the amount of words: '))
+L = []
+for i in range(d):
+    w = input('Enter a word: ')
+    L.append(w)
+L.sort(key = len)
+H = []
+for i in range(len(L)):
+    pL = len(L[i])
+    a = find(H,pL)
+    a.append(L[i][::-1])
+
+H.sort(key= lambda x : x[0])
+for i in range(len(H)):
+    print(H[i][0])
+    sort_str(H[i][1])
+    for i in H[i][1]:
+        print(i,i[::-1])
+# print(H)  

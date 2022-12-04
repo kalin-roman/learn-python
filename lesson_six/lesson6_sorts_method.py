@@ -40,7 +40,7 @@ for id, value in K:
     g[id] = d
 
 sorted_s = list(g.keys())
-sorted_s.sort(key = lambda id : g[id]['sum'], reverse = True)
+sorted_s.sort(key = lambda id : g[id]['sum'], reverse = True) #
 
 R = []
 for id in sorted_s:

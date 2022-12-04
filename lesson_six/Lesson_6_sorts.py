@@ -24,6 +24,7 @@ def bubble_sort(A):
         for j in range(len(A) - i):
             if A[j + 1] < A[j]:
                 A[j],A[j + 1] = A[j + 1],A[j]
+    print('module = ',__name__)
 
 
 def count_sort(A):
@@ -66,8 +67,12 @@ def test_sort(fnSort):
     print('Ok'if A == A_sorted else 'Fail')
 
 
-if __name__=='__main__':
-    test_sort(insert_sort)
-    test_sort(choice_sort)
-    test_sort(bubble_sort)
-    test_sort(count_sort)
+# if __name__=='__main__':
+#     test_sort(insert_sort)
+#     test_sort(choice_sort)
+#     test_sort(bubble_sort)
+#     test_sort(count_sort)
+a = [3,4,5,6,1,6,4,53,0]
+
+if __name__ == '__main__':
+    bubble_sort(a)
