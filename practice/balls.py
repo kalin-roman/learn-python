@@ -27,8 +27,16 @@ class Vector():
         self.y += v.y
 
         
+class polygon():
+    point : Vector
+    color : list
+    screen : Surface
+    speed : Vector
+    size : Vector
 
+    def __init__(self,screen) -> None:
 
+        
 class Ball():
     rad: int
     point: Vector
