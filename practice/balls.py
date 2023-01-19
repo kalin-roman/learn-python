@@ -1,4 +1,4 @@
-import  pygame
+import pygame
 from random import randint
 from pygame.draw import *
 from pygame.surface import Surface
@@ -27,20 +27,20 @@ class Vector():
         self.y += v.y
 
         
-class polygon():
-    point : Vector
-    color : list
-    screen : Surface
-    speed : Vector
-    size : Vector
+# class polygon():
+#     point : Vector
+#     color : list
+#     screen : Surface
+#     speed : Vector
+#     size : Vector
 
-    def __init__(self,screen) -> None:
+#     def __init__(self,screen) -> None:
 
         
-class Ball():
+class Ball:
     rad: int
     point: Vector
-    color: list
+    color: tuple
     screen: Surface
     speed : Vector
     size : Vector
@@ -68,6 +68,8 @@ class Ball():
             self.speed.x = -self.speed.x
         if not self.rad < self.point.y < self.size.y - self.rad:
             self.speed.y = -self.speed.y
+
+
     def check(self,x,y):
         formule1 = ((self.point.x - x) ** 2 + (self.point.y - y) ** 2) ** 0.5
         return formule1 <= self.rad

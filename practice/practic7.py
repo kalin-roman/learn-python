@@ -10,17 +10,6 @@ screen = pygame.display.set_mode(size.get())
 score = 0
 balls = [Ball(screen) for i in range(5)]
 
-def new_ball():
-    global x, y, r
-    x = randint(100,700)
-    y = randint(100,500)
-    r = randint(30,50)
-    color = COLORS[randint(0, 5)]
-    circle(screen, color, (x, y), r)
-    
-def click(event):
-    print(x, y, r)
-
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
