@@ -67,12 +67,12 @@ def test_sort(fnSort):
     print('Ok'if A == A_sorted else 'Fail')
 
 
-# if __name__=='__main__':
-#     test_sort(insert_sort)
-#     test_sort(choice_sort)
-#     test_sort(bubble_sort)
-#     test_sort(count_sort)
-a = [3,4,5,6,1,6,4,53,0]
+if __name__=='__main__':
+    test_sort(insert_sort)
+    test_sort(choice_sort)
+    test_sort(bubble_sort)
+    test_sort(count_sort)
+# a = [3,4,5,6,1,6,4,53,0]
 
-if __name__ == '__main__':
-    bubble_sort(a)
+# if __name__ == '__main__':
+#     insert_sort(a)

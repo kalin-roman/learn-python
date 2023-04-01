@@ -29,9 +29,11 @@ def gennerate_permentations(N:int,M:int = -1,prefix = None):
         prefix.append(number)
         gennerate_permentations(N,M-1,prefix)
         prefix.pop()
+
+
 # gennerate_permentations(3)
 
-# generate_numbers(10,8)
+print(generate_numbers(4,3))
 # gen_bin(4)
 
-print(bin(127))
+# print(bin(127))
